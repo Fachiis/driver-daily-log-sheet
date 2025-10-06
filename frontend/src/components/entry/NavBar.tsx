@@ -9,7 +9,7 @@ function NavBar() {
                   <Truck className="h-6 w-6 text-white" />
                </div>
                <div>
-                  <h1 className="text-2xl font-bold bg-[#E8E6E3] bg-clip-text text-transparent font-['Poppins']">
+                  <h1 className="text-2xl font-bold bg-[#E8E6E3] bg-clip-text text-transparent font-['Poppins'] dark:text-white dark:bg-clip-text dark:text-transparentx">
                      Spotter ELD
                   </h1>
                   <p className="text-sm text-white/80">
