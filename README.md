@@ -200,7 +200,6 @@ Spotter/
     │   │   ├── Entry.tsx            
     │   │   ├── entry/
     │   │   │   ├── NavBar.tsx       
-    │   │   │   ├── MainContent.tsx  
     │   │   │   └── Footer.tsx      
     │   │   ├── trip/
     │   │   │   ├── TripForm.tsx     
