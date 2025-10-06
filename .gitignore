@@ -36,3 +36,6 @@ dist-ssr
 *.tsbuildinfo
 
 __pycache__
+
+# Migration files
+migrations/
