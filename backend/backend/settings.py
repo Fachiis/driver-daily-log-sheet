@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://driver-daily-log-sheet.vercel.app/"
+    "https://driver-daily-log-sheet.vercel.app"
 ]
 
 MIDDLEWARE = [
