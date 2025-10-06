@@ -1,0 +1,3 @@
+class TripConstants:
+    EARTH_RADIUS_MILES = 3963.19
+    AVERAGE_SPEED_MILES_PER_HOUR = 48
