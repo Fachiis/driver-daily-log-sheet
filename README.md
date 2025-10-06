@@ -356,3 +356,50 @@ Used for geocoding address searches:
 - Form validation on both client and server side
 - Responsive design works on mobile, tablet, and desktop
 
+## 🚀 Deployment Considerations
+
+### Backend Deployment (Render)
+
+The backend is configured for easy deployment on Render's free tier:
+
+#### Setup Steps
+
+1. **Push your code to GitHub/GitLab**
+
+2. **Create a Web Service on Render**:
+   - Runtime: Python 3
+   - Build Command: `./build.sh`
+   - Start Command: `gunicorn backend.wsgi:application`
+   - Root Directory: `backend`
+
+3. **Set Environment Variables** in Render:
+   ```
+   SECRET_KEY=<generate-a-strong-secret-key>
+   DEBUG=False
+   DJANGO_SUPERUSER_USERNAME=admin
+   DJANGO_SUPERUSER_EMAIL=admin@example.com
+   DJANGO_SUPERUSER_PASSWORD=<your-secure-password>
+   ```
+
+4. **Deploy**: Render will automatically:
+   - Install dependencies from `requirements.txt`
+   - Run database migrations
+   - Create superuser (via custom management command)
+   - Start the server with Gunicorn
+
+5. **Remove superuser environment variables** after first successful deployment
+
+6. **Update CORS settings** in `settings.py` to include your frontend URL
+
+#### Key Features for Render Deployment
+- ✅ **No shell access required (free plan)**: Custom management command creates superuser automatically
+- ✅ **Build script**: `build.sh` handles migrations and setup
+- ✅ **Environment-based config**: All sensitive data via environment variables
+- ✅ **Production-ready**: Security settings auto-enabled when `DEBUG=False`
+
+### Frontend Deployment
+
+- Verify production build locally:
+  - Run `yarn build` and `yarn preview` to test the production build
+- Build with `yarn build`
+- Deployed on vercel using vite as the preset
