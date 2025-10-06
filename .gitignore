@@ -39,3 +39,4 @@ __pycache__
 
 # Migration files
 migrations/
+db.sqlite3
